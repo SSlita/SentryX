@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tableau.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/logo-full.svg" alt="SentryX" height="32">
+            </div>
+
+            <nav class="side-nav">
+                <a class="active" href="#">Tableau de bord</a>
+                <a href="#">Entreprises</a>
+                <a href="#">Utilisateurs</a>
+                <a href="#">Scans</a>
+                <a href="#">Rapports</a>
+                <a href="#">Abonnements</a>
+                <a href="#">Paramètres</a>
+            </nav>
+
+            <div class="side-bottom">
+                <div class="side-company">
+                    <label for="company-select">Entreprise</label>
+                    <select>
+                        <option>Acme Corp</option>
+                        <option>TechSolutions</option>
+                        <option>Global Industries</option>
+                    </select>
+                </div>
+
+                <div class="side-user">
+                    <span class="avatar">A</span>
+                    <div>
+                        <p class="user-name">Admin</p>
+                        <p class="user-mail">admin@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="page-header">
+                <div>
+                    <h1> Tableau de bord </h1>
+                    <p class="page-desc"> Aperçu de la sécurité de votre entreprise </p>
+                </div>
+
+                <button class="btn btn-primary">Lancer un scan</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <p class="stat-label">Vulnérabilités critiques</p>
+                    <p class="stat-value">3</p>
+                    <p class="stat-trend"> <span class="trend-bad">+3</span> depuis le dernier scan</p>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Vulnérabilités élevées</p>
+                    <p class="stat-value">7</p>
+                    <p class="stat-trend"> <span class="trend-good">-3</span> depuis le dernier scan</p>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Vulnérabilités moyennes</p>
+                    <p class="stat-value">12</p>
+                    <p class="stat-trend"> <span class="trend-good">-5</span> depuis le dernier scan</p>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-label">Vulnérabilités faibles</p>
+                    <p class="stat-value">8</p>
+                    <p class="stat-trend"> <span class="trend-good">-2</span> depuis le dernier scan</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2>Évolution des vulnérabilités</h2>
+                    </div>
+                    <div class="charts-placeholder">
+                        <img class="chart" src="images/chart-evolution.svg"
+                            alt="Évolution des vulnérabilités par gravité sur les cinq derniers scans">
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2> Derniers scans </h2>
+                        <a href="#" class="panel-link">Voir tous</a>
+                    </div>
+
+                    <ul class="scan-list">
+                        <li>
+                            <div>
+                                <p class="scan-name">Scan complet - Infrastructure</p>
+                                <p class="scan-date">Aujourd'hui, 09:42</p>
+                            </div>
+                            <span class="badge badge-active">Terminé</span>
+                        </li>
+
+                        <li>
+                            <div>
+                                <p class="scan-name">Scan application web</p>
+                                <p class="scan-date">Hier, 16:21</p>
+                            </div>
+                            <span class="badge badge-active">Terminé</span>
+                        </li>
+
+                        <li>
+                            <div>
+                                <p class="scan-name">Scan réseau</p>
+                                <p class="scan-date">22 avril 2025, 16:17</p>
+                            </div>
+                            <span class="badge badge-active">Terminé</span>
+                        </li>
+
+                        <li>
+                            <div>
+                                <p class="scan-name">Scan rapide</p>
+                                <p class="scan-date">20 avril 2025, 16:03</p>
+                            </div>
+                            <span class="badge badge-active">Terminé</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="reco">
+                <div>
+                    <p class="reco-title">Recommendations</p>
+                    <p class="reco-text">3 vulnérabilités critiques nécessitant une attention immédiate</p>
+                </div>
+
+                <button class="btn btn-outline">Voir le détail</button>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

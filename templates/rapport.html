@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/rapport.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/logo-full.svg" alt="SentryX" height="32">
+            </div>
+
+            <nav class="side-nav">
+                <a href="#">Tableau de bord</a>
+                <a href="#">Entreprises</a>
+                <a href="#">Utilisateurs</a>
+                <a href="#">Scans</a>
+                <a class="active" href="#">Rapports</a>
+                <a href="#">Abonnements</a>
+                <a href="#">Paramètres</a>
+            </nav>
+
+            <div class="side-bottom">
+                <div class="side-company">
+                    <label for="company">Entreprise</label>
+                    <select>
+                        <option>Acme Corp</option>
+                        <option>TechSolutions</option>
+                        <option>Global Industries</option>
+                    </select>
+                </div>
+
+                <div class="side-user">
+                    <span class="avatar">A</span>
+                    <div>
+                        <p class="user-name">Admin</p>
+                        <p class="user-mail">admin@exemple.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="page-header">
+                <div>
+                    <h1>Rapports de scan</h1>
+                    <p class="page-desc">Scan complet - Infrastructure</p>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn btn-outline">Exporter en PDF</button>
+                    <button class="btn btn-primary">Relancer le scan</button>
+                </div>
+            </div>
+
+            <section class="scan">
+                <div><span>Cible</span><strong>acme.com</strong></div>
+                <div><span>Date</span><strong>1 janvier 2026, 09:50</strong></div>
+                <div><span>Durée</span><strong>12 min 40s</strong></div>
+                <div><span>Eléments analysés</span><strong>20</strong></div>
+                <div><span>Statut</span><span class="badge badge-active">Terminé</span></div>
+            </section>
+
+            <div class="summary">
+                <section class="panel panel-score">
+                    <h2>Score de sécurité</h2>
+                    <div class="score-ring" style="--score:72">
+                        <div class="score-content">
+                            <span class="score-value">72</span>
+                            <span class="score-max">/ 100</span>
+                        </div>
+                    </div>
+
+                    <p class="score-trend"><span class="trend-good">+6</span> points depuis le scan précédent</p>
+                </section>
+
+                <section class="panel">
+                    <h2>Répartition par gravité</h2>
+                    <ul class="sev-bars">
+                        <li>
+                            <span class="sev-name">Critiques</span>
+                            <div class="bar">
+                                <div class="bar-fill sev-critical" style="width: 12%"></div>
+                            </div>
+                            <span class="sev-count">3</span>
+                        </li>
+                        <li>
+                            <span class="sev-name">Élevées</span>
+                            <div class="bar">
+                                <div class="bar-fill sev-high" style="width: 28%"></div>
+                            </div>
+                            <span class="sev-count">7</span>
+                        </li>
+                        <li>
+                            <span class="sev-name">Moyennes</span>
+                            <div class="bar">
+                                <div class="bar-fill sev-medium" style="width: 48%"></div>
+                            </div>
+                            <span class="sev-count">12</span>
+                        </li>
+                        <li>
+                            <span class="sev-name">Faibles</span>
+                            <div class="bar">
+                                <div class="bar-fill sev-low" style="width: 32%"></div>
+                            </div>
+                            <span class="sev-count">8</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="panel">
+                    <h2>Evolution du score</h2>
+                    <div class="chart-placehoplder">
+                        <img class="chart" src="images/chart-score.svg" alt="Évolution du score de sécurité sur les cinq derniers scans">
+                    </div>
+                </section>
+            </div>
+
+            <section class="vulns">
+                <div class="vuln-header">
+                    <h2>Vulnérabilités détectées</h2>
+                </div>
+
+                <details class="vuln" open>
+                    <summary>
+                        <span class="badge badge-critical">Critique</span>
+                        <span class="vuln-title">Injection SQL sur le formulaire de connexion</span>
+                        <span class="vuln-asset">acme.com/login</span>
+                        <scan class="vuln-score">CVSS 9.8</scan>
+                    </summary>
+
+                    <div class="vuln-body">
+                        <div>
+                            <h3>Description</h3>
+                            <p>
+                                Le paramètre email n'est pas filtré et permet d'injecter du SQL, ce qui peut exposer la
+                                base de données.
+                            </p>
+                        </div>
+                        <div class="reco-box">
+                            <h3>Recommendation</h3>
+                            <p>Utiliser des requêtes préparées et valider toutes les entrées côté serveur.</p>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

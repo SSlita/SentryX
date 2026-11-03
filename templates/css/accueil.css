@@ -1,0 +1,197 @@
+:root {
+    --navy: #0a1628;
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background: var(--navy);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: white;
+}
+
+.auth {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Boutons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-primary{
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-light);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: rgba(48, 84, 161, 0.5);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero */
+.hero {
+    background: var(--navy);
+    color: white;
+    padding: 4rem 2rem 6rem;
+}
+
+.eyebrow {
+    text-align: center;
+    color: var(--blue-light);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 40rem;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--blue-light);
+}
+
+.hero-desc {
+    color: #cbd5e1;
+    max-width: 480px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-visual {
+    min-height: 300px;
+    border-radius: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Fonctions */
+.features {
+    padding: 3rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.card img {
+    margin-bottom: 1rem;
+}

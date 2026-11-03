@@ -1,0 +1,273 @@
+/* ---------- Étoiles (supporte les demi-notes : --rating: 4.5) ---------- */
+.stars {
+    --rating: 5;
+    display: inline-block;
+    font-size: 1.1rem;
+    line-height: 1;
+    background: linear-gradient(
+        90deg,
+        #f59e0b calc(var(--rating) / 5 * 100%),
+        #cbd5e1 0
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Carte d'avis ---------- */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.review-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.review-text {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1; /* aligne les auteurs en bas, même si les textes diffèrent */
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--blue) 15%, white);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: grid;
+    place-items: center;
+}
+
+.author-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.author-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.reviews {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.reviews-subtitle {
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    line-height: 1.5;
+}
+
+.reviews-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.reviews-link:hover {
+    text-decoration: underline;
+}
+
+.avis-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.avis-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.avis-intro h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.avis-intro p {
+    color: var(--text-muted);
+}
+
+/* Résumé des notes */
+.rating-summary {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.rating-global {
+    text-align: center;
+}
+
+.rating-number {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.rating-count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.rating-bars {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.rating-bars li {
+    display: grid;
+    grid-template-columns: 40px 1fr 45px;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.rating-bars li span:last-child {
+    text-align: right;
+    color: var(--text-muted);
+}
+
+.rbar {
+    height: 8px;
+    background: var(--bg-light);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.rbar div {
+    height: 100%;
+    background: #f59e0b;
+    border-radius: 999px;
+}
+
+.avis-page .review-grid {
+    margin-bottom: 3.5rem;
+}
+
+/* Formulaire */
+.review-form-section {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.review-form-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label,
+.field-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.field input[type="text"],
+.field textarea {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: 2px solid var(--blue-light);
+    outline-offset: 1px;
+}
+
+.review-form .btn {
+    align-self: flex-start;
+}
+
+/* Sélecteur d'étoiles */
+.rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.2rem;
+}
+
+.rating-input input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rating-input label {
+    font-size: 1.9rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.rating-input label:hover,
+.rating-input label:hover ~ label,
+.rating-input input:checked ~ label {
+    color: #f59e0b;
+}
+
+.rating-input input:focus-visible + label {
+    outline: 2px solid var(--blue-light);
+    border-radius: 4px;
+}

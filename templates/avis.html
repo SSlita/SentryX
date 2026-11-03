@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/avis.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo-full.svg" alt="SentryX" height="32">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#avis" class="active">Avis</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth">
+            <button class="btn btn-secondary">Se connecter</button>
+            <button class="btn btn-primary">S'inscrire</button>
+        </div>
+    </header>
+
+    <main class="avis-page">
+        <section class="avis-intro">
+            <h1>Avis de nos clients</h1>
+            <p>Découvrez les retours des équipes qui utilisent SentryX.</p>
+        </section>
+
+        <!-- Résumé des notes -->
+        <section class="rating-summary">
+            <div class="rating-global">
+                <p class="rating-number">4,7</p>
+                <div class="stars" style="--rating: 4.7" aria-label="Note moyenne : 4,7 sur 5">★★★★★</div>
+                <p class="rating-count">128 avis</p>
+            </div>
+
+            <ul class="rating-bars">
+                <li><span>5 ★</span>
+                    <div class="rbar">
+                        <div style="width: 78%"></div>
+                    </div><span>78 %</span>
+                </li>
+                <li><span>4 ★</span>
+                    <div class="rbar">
+                        <div style="width: 15%"></div>
+                    </div><span>15 %</span>
+                </li>
+                <li><span>3 ★</span>
+                    <div class="rbar">
+                        <div style="width: 5%"></div>
+                    </div><span>5 %</span>
+                </li>
+                <li><span>2 ★</span>
+                    <div class="rbar">
+                        <div style="width: 1%"></div>
+                    </div><span>1 %</span>
+                </li>
+                <li><span>1 ★</span>
+                    <div class="rbar">
+                        <div style="width: 1%"></div>
+                    </div><span>1 %</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Liste des avis -->
+        <section class="review-grid">
+            <article class="review-card">
+                    <div class="stars" style="--rating: 5" aria-label="Note : 5 sur 5">★★★★★</div>
+                    <blockquote class="review-text">
+                        « Les rapports sont clairs et les recommandations directement exploitables par nos équipes. »
+                    </blockquote>
+                    <div class="review-author">
+                        <span class="author-initials">MD</span>
+                        <div>
+                            <p class="author-name">Marie Durand</p>
+                            <p class="author-role">RSSI, Acme Corp</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars" style="--rating: 4" aria-label="Note : 4 sur 5">★★★★★</div>
+                    <blockquote class="review-text">
+                        « Le suivi en temps réel nous a permis de corriger une faille critique en moins d'une journée. »
+                    </blockquote>
+                    <div class="review-author">
+                        <span class="author-initials">TL</span>
+                        <div>
+                            <p class="author-name">Thomas Lefèvre</p>
+                            <p class="author-role">DSI, TechSolutions</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars" style="--rating: 5" aria-label="Note : 5 sur 5">★★★★★</div>
+                    <blockquote class="review-text">
+                        « La gestion multi-entreprises simplifie énormément le suivi de nos différents clients. »
+                    </blockquote>
+                    <div class="review-author">
+                        <span class="author-initials">SB</span>
+                        <div>
+                            <p class="author-name">Sarah Benali</p>
+                            <p class="author-role">Consultante, BlueOcean</p>
+                        </div>
+                    </div>
+                </article>
+        </section>
+
+        <!-- Formulaire -->
+        <section class="review-form-section">
+            <h2>Donnez votre avis</h2>
+            <form class="review-form">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="field">
+                        <label for="poste">Poste et entreprise</label>
+                        <input type="text" id="poste" name="poste" placeholder="RSSI, Acme Corp">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <span class="field-label">Votre note</span>
+                    <div class="rating-input">
+                        <input type="radio" name="note" id="n5" value="5" required><label for="n5"
+                            title="5 étoiles">★</label>
+                        <input type="radio" name="note" id="n4" value="4"><label for="n4" title="4 étoiles">★</label>
+                        <input type="radio" name="note" id="n3" value="3"><label for="n3" title="3 étoiles">★</label>
+                        <input type="radio" name="note" id="n2" value="2"><label for="n2" title="2 étoiles">★</label>
+                        <input type="radio" name="note" id="n1" value="1"><label for="n1" title="1 étoile">★</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="commentaire">Votre commentaire</label>
+                    <textarea id="commentaire" name="commentaire" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Publier mon avis</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
